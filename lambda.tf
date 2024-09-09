@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_log_group" "lambda-log-group" {
   name              = "UpdateCloudflareIps"
   count             = var.enabled ? 1 : 0
-  retention_in_days = 30
+  retention_in_days = 7
 }
 
 resource "aws_iam_role" "iam_for_lambda" {
